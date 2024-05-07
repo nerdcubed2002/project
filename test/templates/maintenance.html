@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <title>Starter Template - Materialize</title>
+    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="./static/css2/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+    <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+            <br><br>
+            <h1 class="header center orange-text">PREDICTIVE MAINTENANCE SYSTEM </h1>
+            <div class="row center">
+                <h5 class="header col s12 light">Predict Machine Failure <br> </h5>
+            </div>
+            <div class="row">
+                <form action='/maintenance' method="post" class="col s12">
+                    <div class="row">
+                        <div class="input-field col s4">
+                            <label for="\_name"><b>Type</b></label>
+                            <br>
+                            <input id="\_name" name="Type" placeholder="Product type" type="text" class="validate">
+                        </div>
+                        <div class="input-field col s4">
+                            <label for="first\_name"><b>Air Temperature</b></label>
+                            <br>
+                            <input placeholder="Air temperature in Kelvin" name="Air Temperature" id="first\_name" type="text" class="validate">
+                        </div>
+                        <div class="input-field col s4">
+                            <label for="last\_name"><b>Process Temperature</b></label>
+                            <br>
+                            <input id="last\_name" name="Process Temperature" placeholder="Process Temperature in Kelvin" type="text" class="validate">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s4">
+                            <label for="first\_name"><b>Rotational speed</b></label>
+                            <br>
+                            <input placeholder="Rotational speed in rpm" name="Rotational speed" id="first\_name" type="text" class="validate">
+                        </div>
+                        <div class="input-field col s4">
+                            <label for="last\_name"><b>Torque</b></label>
+                            <br>
+                            <input id="last\_name" name="Torque" placeholder="Torque in Nm" type="text" class="validate">
+                        </div>
+                        <div class="input-field col s4">
+                            <label for="\_name"><b>Tool wear</b></label>
+                            <br>
+                            <input id="\_name" name="Tool wear" placeholder="Tool wear in min" type="text" class="validate">
+                        </div>
+                    </div>
+                    <div class="row center">
+                        <button type="submit" class="btn-large waves-effect waves-light orange">Predict Probability</button>
+                    </div>
+                </form>
+            </div>
+            <div>
+               <br><h4 align="center"><b>{{pred}}</b></h4>
+                  
+               
+            </div>
+            
+        </div>
+        <br><br>
+    </div>
+    <!-- Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src=".js/materialize.js"></script>
+    <script src="js/init.js"></script>
+</body>
+</html>

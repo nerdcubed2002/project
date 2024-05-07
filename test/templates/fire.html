@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <title>Starter Template - Materialize</title>
+    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="./static/css2/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+    <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+            <br><br>
+            <h1 class="header center orange-text">FALSE FIRE ALARM DETECTION </h1>
+            <div class="row center">
+                <h5 class="header col s12 light">Predict if fire alarm is false or not <br> </h5>
+            </div>
+            <div class="row">
+                <form action='/fire' method="post" class="col s12">
+                  <div class="row">
+                     <div class="input-field col s4">
+                         <label for="_name"><b>Temperature</b></label>
+                         <br>
+                       <input id="_name" name="Temperature" placeholder="Temperature in Kelvin" type="text" class="validate">
+             
+                     </div>
+                     <div class="input-field col s4">
+                         <label for="first_name"><b>Humidity</b></label>
+                         <br>
+                       <input placeholder="Humidity in " name="Humidity" id="first_name" type="text" class="validate">
+                     </div>
+                     <div class="input-field col s4">
+             
+                       <label for="last_name"><b>TVOC</b></label>
+                         <br>
+                       <input id="last_name" name="TVOC" placeholder="TVOC in "  type="text" class="validate">
+             
+                     </div>
+             
+                     
+                     <div class="row">
+                         <div class="input-field col s4">
+                             <label for="first_name"><b>eCO2</b></label>
+                             <br>
+                           <input placeholder="eCO2 in " name="eCO2" id="first_name" type="text" class="validate">
+                         </div>
+                         <div class="input-field col s4">
+                 
+                           <label for="last_name"><b>RawH2</b></label>
+                             <br>
+                           <input id="last_name" name="RawH2" placeholder="RawH2 in "  type="text" class="validate">
+                 
+                         </div>
+                 
+                         <div class="input-field col s4">
+                             <label for="_name"><b>RawEthanol</b></label>
+                             <br>
+                           <input id="_name" name="RawEthanol" placeholder="RawEthanol in " type="text" class="validate">
+                 
+                         </div>
+                   </div>
+                   <div class="row">
+                     <div class="input-field col s4">
+                         <label for="first_name"><b>Pressure</b></label>
+                         <br>
+                       <input placeholder="Pressure in " name="Pressure" id="first_name" type="text" class="validate">
+                     </div>
+                     <div class="input-field col s4">
+             
+                       <label for="last_name"><b>PM1</b></label>
+                         <br>
+                       <input id="last_name" name="PM1" placeholder="PM1 in "  type="text" class="validate">
+             
+                     </div>
+             
+                     <div class="input-field col s4">
+                         <label for="_name"><b>PM2_5</b></label>
+                         <br>
+                       <input id="_name" name="PM2_5" placeholder="PM2_5 in " type="text" class="validate">
+             
+                     </div>
+               </div>
+               <div class="row">
+                 <div class="input-field col s4">
+                     <label for="first_name"><b>NC0_5</b></label>
+                     <br>
+                   <input placeholder="NC0_5 in " name="NC0_5" id="first_name" type="text" class="validate">
+                 </div>
+                 <div class="input-field col s4">
+             
+                   <label for="last_name"><b>NC1</b></label>
+                     <br>
+                   <input id="last_name" name="NC1" placeholder="NC1 in "  type="text" class="validate">
+             
+                 </div>
+             
+                 <div class="input-field col s4">
+                     <label for="_name"><b>NC2_5</b></label>
+                     <br>
+                   <input id="_name" name="NC2_5" placeholder="NC2_5 in " type="text" class="validate">
+             
+                 </div>
+             </div>
+             <div class="row">
+                 <div class="input-field col s4">
+                     <label for="first_name"><b>CNT</b></label>
+                     <br>
+                   <input placeholder="CNT in " name="CNT" id="first_name" type="text" class="validate">
+                 </div>
+               
+             
+                 
+             </div>
+             
+                   <div class="row center">
+             
+                       <button type="submit" class="btn-large waves-effect waves-light orange" >Predict Probability</button>
+                   </div>
+                </form>
+            </div>
+            <div>
+              <br><h4 align="center"><b>{{pred}}</b></h4>
+        </div>
+        <br><br>
+    </div>
+    <!-- Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src=".js/materialize.js"></script>
+    <script src="js/init.js"></script>
+</body>
+</html>
